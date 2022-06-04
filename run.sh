@@ -7,10 +7,10 @@ clear
 echo "Katacoda Centos Windows 11 by fb.com/thuong.hai.581"
 read -p "Paste authtoken here (Copy and Right-click to paste): " CRP
 ./ngrok authtoken $CRP 
-nohup ./ngrok tcp --region eu 30889 &>/dev/null &
+nohup ./ngrok tcp --region eu 3389 &>/dev/null &
 apt install sudo -y
-echo "Downloading QEMU"
-sudo yum install -y qemu-kvm
+ "Downloading QEMU"
+sudo apt install -y qemu-kvm
 link1_status=$(curl -Is -k https://app.vagrantup.com/thuonghai2711/boxes/WindowsQCOW2/versions/1.0.2/providers/qemu.box | grep HTTP | cut -f2 -d" " | head -1)
 link2_status=$(curl -Is -k https://transfer.sh/1XQtaoZ/lite11.qcow2 | grep HTTP | cut -f2 -d" ")
 sudo wget -O lite11.qcow2 https://app.vagrantup.com/thuonghai2711/boxes/WindowsQCOW2/versions/1.0.2/providers/qemu.box
